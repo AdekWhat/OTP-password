@@ -1,16 +1,11 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
-<html lang="en">
+{% block content %}
+{% load crispy_forms_tags %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TenderShop</title>
-
-</head>
-
-<body>
-{{ form.as_ul }}
-</body>
-
-</html>
+<form method="post">
+ {% csrf_token %}
+ {{ form|crispy  }}
+ <button type="submit" class="btn btn-success">Confirm</button>
+</form>
+{% endblock %}

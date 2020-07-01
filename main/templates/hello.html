@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<span>Добрый день, {{ user.name }}.</span>
+{% if user.is_employee %}
+<span>Ваш отдел {{ user.department }}</span>
+{% endif %}
+{% endblock %}

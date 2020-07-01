@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #local
-    'main'
+    'main',
     #3-d party
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'OTP.wsgi.application'
 
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
